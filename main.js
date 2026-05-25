@@ -1,3 +1,31 @@
+/* ================= HEADER BEHAVIOR ================= */
+
+const header = document.querySelector(".site-header");
+
+if (header) {
+
+  const isIndexPage = document.body.classList.contains("index-page");
+  const isProjectPage = document.body.classList.contains("project-page");
+
+  // INDEX PAGE: fade in on scroll
+  if (isIndexPage) {
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 80) {
+        header.classList.add("visible");
+      } else {
+        header.classList.remove("visible");
+      }
+    });
+
+  }
+
+  // PROJECT PAGES: always visible
+  if (isProjectPage) {
+    header.classList.add("sticky");
+  }
+
+}
 /* ================= INTRO SCROLL ================= */
 
 const scrollArrow = document.querySelector(".scroll-arrow");
@@ -51,14 +79,6 @@ if (filterButtons.length && cards.length) {
   });
 
 }
-
-
-/* ================= PROJECT PAGE STICKY HEADER ================= */
-
-if (header && document.body.classList.contains("project-page")) {
-  header.classList.add("sticky");
-}
-
 
 /* ================= PROJECT DROPDOWN ================= */
 
