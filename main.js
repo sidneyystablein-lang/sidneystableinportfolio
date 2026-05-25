@@ -18,6 +18,39 @@ const cards = document.querySelectorAll(".project-card");
 
 let activeTags = [];
 
+/* ================= CUSTOM SCROLLBAR ================= */
+
+const projectFeed = document.querySelector(".project-feed");
+const scrollThumb = document.querySelector(".custom-scroll-thumb");
+
+function updateScrollThumb() {
+  if (!projectFeed || !scrollThumb) return;
+
+  const scrollTop = projectFeed.scrollTop;
+
+  const scrollHeight =
+    projectFeed.scrollHeight - projectFeed.clientHeight;
+
+  const thumbHeight = 120;
+
+  const maxThumbMove =
+    projectFeed.clientHeight - thumbHeight;
+
+  const scrollPercent =
+    scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+
+  const thumbY = scrollPercent * maxThumbMove;
+
+  scrollThumb.style.transform = `translateY(${thumbY}px)`;
+}
+
+/* attach scroll listener */
+if (projectFeed) {
+  projectFeed.addEventListener("scroll", updateScrollThumb);
+}
+
+/* ================= FILTER LOGIC ================= */
+
 if (filterButtons.length && cards.length) {
 
   filterButtons.forEach(button => {
@@ -34,23 +67,29 @@ if (filterButtons.length && cards.length) {
         activeTags.push(tag);
       }
 
-        cards.forEach(card => {
+      cards.forEach(card => {
 
         const tags = card.dataset.tags.split(" ");
 
         const show =
-            activeTags.length === 0 ||
-            activeTags.some(tag => tags.includes(tag));
+          activeTags.length === 0 ||
+          activeTags.some(tag => tags.includes(tag));
 
         card.style.display = show ? "flex" : "none";
 
-        });
+      });
+
+      /* IMPORTANT: sync scrollbar after layout changes */
+      updateScrollThumb();
 
     });
 
   });
 
 }
+
+/* initial position on load */
+updateScrollThumb();
 /* ================= HEADER SCROLL (INDEX PAGE ONLY) ================= */
 
 const header = document.querySelector(".site-header");
