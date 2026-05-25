@@ -280,7 +280,7 @@ h2 {
   width: 60%;
   height: 80vh;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   padding: 2rem;
 
@@ -288,32 +288,30 @@ h2 {
 
   scroll-snap-type: y proximity;
 
-  scrollbar-gutter: stable;
+  position: relative;
 
-  border-radius: 15px;
+  scrollbar-width: none; 
 }
 
 /* SCROLLBAR */
-.project-feed::-webkit-scrollbar {
-  width: 12px;
-}
+.project-feed::after {
+  content: "";
 
-.project-feed::-webkit-scrollbar-track {
-  background: transparent;
-}
+  position: absolute;
 
-.project-feed::-webkit-scrollbar-thumb {
-  background: #2480c3;
+  top: 2rem;
+  right: 0.75rem;
+
+  width: 10px;
+  height: 120px; /* FIXED LENGTH */
 
   border-radius: 999px;
 
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
+  background: #2480c3;
 
-.project-feed::-webkit-scrollbar-thumb:hover {
-  background: #216DB9;
-  background-clip: padding-box;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+
+  pointer-events: none;
 }
 
 /* CARDS */
@@ -325,10 +323,6 @@ h2 {
   margin-bottom: 10px;
 
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-
-  transition:
-  opacity 0.25s ease,
-  transform 0.25s ease;
 }
 
 .project-card > a {
@@ -343,18 +337,6 @@ h2 {
   flex: 1;
   width: 100%;
   object-fit: cover;
-}
-
-.project-card.filtered-out {
-  opacity: 0;
-
-  pointer-events: none;
-
-  transform: scale(0.98);
-
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
 }
 
 .project-footer {

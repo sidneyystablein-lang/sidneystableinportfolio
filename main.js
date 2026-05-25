@@ -34,20 +34,17 @@ if (filterButtons.length && cards.length) {
         activeTags.push(tag);
       }
 
-      cards.forEach(card => {
+        cards.forEach(card => {
 
         const tags = card.dataset.tags.split(" ");
 
         const show =
-          activeTags.length === 0 ||
-          activeTags.some(tag => tags.includes(tag));
+            activeTags.length === 0 ||
+            activeTags.some(tag => tags.includes(tag));
 
-        if (show) {
-            card.classList.remove("filtered-out");
-            } else {
-            card.classList.add("filtered-out");
-        }
-      });
+        card.style.display = show ? "flex" : "none";
+
+        });
 
     });
 
