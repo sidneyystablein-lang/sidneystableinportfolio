@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>sidney Shae's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
 
+<body class="index-page">
+
+<!-- GLOBAL NAV (FADE-IN VERSION) -->
+<header class="site-header">
+  <nav class="header-nav">
+
+    <a href="../index.html" class="nav-home">Home</a>
+
+    <div class="nav-projects">
+      <button class="projects-toggle">
+        Projects ▾
+      </button>
+
+      <ul class="projects-dropdown">
+        <li><a href="Projects/project1.html">Service Express</a></li>
+        <li><a href="Projects/project5.html">Shae Creates</a></li>
+        <li><a href="Projects/project2.html">CATA</a></li>
+        <li><a href="Projects/project3.html">Client Portfolio</a></li>
+        <li><a href="Projects/project4.html">SEE-Insights AI App</a></li>
+      </ul>
+    </div>
+
+  </nav>
+</header>
+
+<div class="page-wrapper">
+
+<!-- ================= INTRO ================= -->
+<header id="intro" class="intro-section">
+  <div class="nameplate">
+
+  </div>
+
+  <button class="scroll-arrow" aria-label="Scroll to projects">
+    ↓
+  </button>
+</header>
+
+<!-- ================= PROJECT OVERVIEW ================= -->
+<section id="projects" class="project-overview">
+
+  <div class="project-layout">
+
+    <!-- LEFT COLUMN -->
+    <aside class="project-filter">
+      <table class="filter-table">
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Check</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Graphic Design</td>
+            <td><input type="checkbox" data-tag="graphic"></td>
+          </tr>
+          <tr>
+            <td>UX / UI</td>
+            <td><input type="checkbox" data-tag="uxui"></td>
+          </tr>
+          <tr>
+            <td>Web Design</td>
+            <td><input type="checkbox" data-tag="web"></td>
+          </tr>
+          <tr>
+            <td>Social Media</td>
+            <td><input type="checkbox" data-tag="social"></td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <div class="project-feed">
+
+    <article class="project-card" data-tags="graphic uxui">
+      <a href="Projects/project1.html">
+
+      <img
+        src="assets/images/Service Express thumbnail.png"
+        alt="Project One preview"
+        class="project-image"
+      >
+
+      <footer class="project-footer">
+        <div class="footer-line"></div>
+
+        <h3>Service Express</h3>
+
+        <div class="pill-row">
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            Graphic Design
+          </div>
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            UX / UI
+          </div>
+          <div class="pill">
+            <span class="pill-label">DATE</span>
+            2023-2024
+          </div>
+        </div>
+
+        <div class="footer-line"></div>
+      </footer>
+
+    </a>
+  </article>
+
+  <article class="project-card" data-tags="graphic web">
+    <a href="Projects/project5.html">
+      <img
+        src="assets/images/project5-hero.jpg"
+        alt="Project Five preview"
+        class="project-image"
+      >
+
+      <footer class="project-footer">
+        <div class="footer-line"></div>
+
+        <h3>Shae Creates</h3>
+
+        <div class="pill-row">
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            Graphic Design
+          </div>
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            Web Design
+          </div>
+          <div class="pill">
+            <span class="pill-label">DATE</span>
+            2026
+          </div>
+        </div>
+
+        <div class="footer-line"></div>
+      </footer>
+
+    </a>
+  </article>
+
+  <article class="project-card" data-tags="uxui web">
+    <a href="Projects/project2.html">
+      <img
+        src="assets/images/project2-hero.jpg"
+        alt="Project Two preview"
+        class="project-image"
+      >
+
+      <footer class="project-footer">
+        <div class="footer-line"></div>
+
+        <h3>CATA</h3>
+
+        <div class="pill-row">
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            UX / UI
+          </div>
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            Web Design
+          </div>
+          <div class="pill">
+            <span class="pill-label">DATE</span>
+            2024-2025
+          </div>
+        </div>
+
+        <div class="footer-line"></div>
+      </footer>
+
+    </a>
+  </article>
+
+  <article class="project-card" data-tags="social web">
+    <a href="Projects/project3.html">
+      <img
+        src="assets/images/camila-portfolio-thumbnail.png"
+        alt="Project Three preview"
+        class="project-image"
+      >
+
+      <footer class="project-footer">
+        <div class="footer-line"></div>
+
+        <h3>Client Portfolio</h3>
+
+        <div class="pill-row">
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            Social Media
+          </div>
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            Web Design
+          </div>
+          <div class="pill">
+            <span class="pill-label">DATE</span>
+            2024
+          </div>
+        </div>
+
+        <div class="footer-line"></div>
+      </footer>
+
+    </a>
+  </article>
+
+  <article class="project-card" data-tags="uxui web">
+    <a href="Projects/project4.html">
+      <img
+        src="assets/images/project4-hero.jpg"
+        alt="Project Four preview"
+        class="project-image"
+      >
+
+      <footer class="project-footer">
+        <div class="footer-line"></div>
+
+        <h3>SEE-Insights AI App</h3>
+
+        <div class="pill-row">
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            UX/UI
+          </div>
+          <div class="pill">
+            <span class="pill-label">TAG</span>
+            Web Design
+          </div>
+          <div class="pill">
+            <span class="pill-label">DATE</span>
+            2024-2025
+          </div>
+        </div>
+
+        <div class="footer-line"></div>
+      </footer>
+
+    </a>
+  </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact-section">
+
+  <div class="contact-image-wrapper">
+    <img
+      src="assets/images/patch-pink-blue.png"
+      alt="Contact image"
+      class="contact-image"
+    >
+  </div>
+
+  <div class="contact-form">
+    <p class="contact-intro">
+      Questions, comments, or ideas? Let’s connect!
+    </p>
+
+    <form class="contact-form-fields">
+
+      <div class="form-row">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="form-row message-row">
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" aria-label="Send message">→</button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>Designed and Coded by Sidney Stablein</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
