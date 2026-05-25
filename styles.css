@@ -216,8 +216,9 @@ min-height: 100vh;
 
 /* ================= PROJECT OVERVIEW ================= */
 .project-overview {
-  background: var(--light);
+  background: var(--section);
   width: 100vw;
+  padding: 4rem 0 4rem;
   margin-left: calc(50% - 50vw);
 }
 
