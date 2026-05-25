@@ -124,13 +124,17 @@ h2 {
 }
 
 /* ================= INTRO ================= */
+
 .intro-section {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 6rem 2rem;
+
+  padding:
+    clamp(8rem, 14vh, 12rem)
+    2rem
+    clamp(7rem, 12vh, 10rem);
 }
 
 .intro-text-block {
@@ -140,20 +144,33 @@ h2 {
   transform: translateY(30px);
 
   animation: introFade 1.2s ease forwards;
+
+  text-align: center;
 }
 
 .intro-text-block h1 {
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
-  line-height: 1.05;
-  margin-bottom: 2rem;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.08;
+
+  margin: 0 auto 2rem;
+
+  max-width: 850px;
+
   color: var(--dark);
+
+  text-align: center;
 }
 
 .intro-text-block p {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   line-height: 1.9;
+
+  max-width: 760px;
+
+  margin: 0 auto;
+
   text-align: justify;
-  max-width: 780px;
+
   color: rgba(15, 23, 42, 0.82);
 }
 
@@ -266,21 +283,46 @@ h2 {
 /* RIGHT COLUMN */
 .project-feed {
   width: 60%;
-  height: 100%;
-  overflow-y: auto;
+  height: 80vh;
+
+  overflow-y: scroll;
+
   padding: 2rem;
+
   background: var(--light);
+
   scroll-snap-type: y proximity;
+
+  scrollbar-gutter: stable;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
 /* SCROLLBAR */
 .project-feed::-webkit-scrollbar {
-  width: 10px;
-  color: #2480c3;
+  width: 12px;
+}
+
+.project-feed::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 999px;
 }
 
 .project-feed::-webkit-scrollbar-thumb {
   background: #2480c3;
+
+  border-radius: 999px;
+
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.project-feed::-webkit-scrollbar-thumb:hover {
+  background: #216DB9;
+  background-clip: padding-box;
 }
 
 /* CARDS */
