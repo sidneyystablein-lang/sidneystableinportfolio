@@ -42,9 +42,11 @@ if (filterButtons.length && cards.length) {
           activeTags.length === 0 ||
           activeTags.some(tag => tags.includes(tag));
 
-        card.style.visibility = show ? "visible" : "hidden";
-        card.style.position = show ? "relative" : "absolute";
-        card.style.pointerEvents = show ? "auto" : "none";
+        if (show) {
+            card.classList.remove("filtered-out");
+            } else {
+            card.classList.add("filtered-out");
+        }
       });
 
     });
