@@ -1,5 +1,5 @@
 :root {
-  --dark: #b34723;
+  --dark: #0f1a36;
   --light: #EBF5FF;
   --medium: #D4EAFF;
   --button-blue: #216DB9;
@@ -229,7 +229,7 @@ h2 {
   align-items: flex-start;
   justify-content: center;
 
-  background: var(--bg);
+  background: transparent;
 }
 
 .filter-panel {
@@ -296,7 +296,7 @@ h2 {
 
   padding: 2rem;
 
-  background: var(--light);
+  background:transparent;
 
   scroll-snap-type: y proximity;
 
