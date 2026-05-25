@@ -1,5 +1,5 @@
 :root {
-  --dark: #0f172a;
+  --dark: #0f1a36;
   --light: #EBF5FF;
   --medium: #D4EAFF;
   --button-blue: #216DB9;
@@ -176,6 +176,17 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.highlight-blue {
+  background: #216DB9;
+  color: var(--dark);
+
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .scroll-arrow {
