@@ -42,7 +42,9 @@ if (filterButtons.length && cards.length) {
           activeTags.length === 0 ||
           activeTags.some(tag => tags.includes(tag));
 
-        card.style.display = show ? "flex" : "none";
+        card.style.visibility = show ? "visible" : "hidden";
+        card.style.position = show ? "relative" : "absolute";
+        card.style.pointerEvents = show ? "auto" : "none";
       });
 
     });
