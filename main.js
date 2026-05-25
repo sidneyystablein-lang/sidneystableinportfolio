@@ -13,18 +13,29 @@ if (scrollArrow) {
 
 /* ================= PROJECT FILTERING ================= */
 
-const checkboxes = document.querySelectorAll(".filter-table input");
+const filterButtons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".project-card");
 
-if (checkboxes.length && cards.length) {
-  checkboxes.forEach(box => {
-    box.addEventListener("change", () => {
+let activeTags = [];
 
-      const activeTags = [...checkboxes]
-        .filter(cb => cb.checked)
-        .map(cb => cb.dataset.tag);
+if (filterButtons.length && cards.length) {
+
+  filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      const tag = button.dataset.tag;
+
+      button.classList.toggle("active");
+
+      if (activeTags.includes(tag)) {
+        activeTags = activeTags.filter(t => t !== tag);
+      } else {
+        activeTags.push(tag);
+      }
 
       cards.forEach(card => {
+
         const tags = card.dataset.tags.split(" ");
 
         const show =
@@ -33,11 +44,12 @@ if (checkboxes.length && cards.length) {
 
         card.style.display = show ? "flex" : "none";
       });
+
     });
+
   });
+
 }
-
-
 /* ================= HEADER SCROLL (INDEX PAGE ONLY) ================= */
 
 const header = document.querySelector(".site-header");
