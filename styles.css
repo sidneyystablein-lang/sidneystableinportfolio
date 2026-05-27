@@ -254,9 +254,17 @@ min-height: 100vh;
 .filter-heading {
   text-align: left;
   font-size: clamp(2rem, 4vw, 3.5rem);
-  margin: 0 0 2rem;
+  margin: 0 0 0.5rem;
   padding: 0;
   color: var(--dark);
+}
+
+.filter-subheader {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .filter-buttons {
@@ -433,10 +441,21 @@ text-align: left;
   flex-shrink: 0;
 }
 
-.contact-image {
+.contact-image,
+.contact-icon {
   width: 352px;
   height: 251px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-image {
   object-fit: cover;
+}
+
+.contact-icon {
+  font-size: 5rem;
 }
 
 /* RIGHT CONTENT */
