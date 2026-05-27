@@ -585,7 +585,7 @@ min-height: 100vh;
   margin: 0 0 1rem;
   text-align: left;
   max-width: none;
-  padding: 0;
+  padding: none;
   margin-left: 0;
   margin-right: 0;
 }
