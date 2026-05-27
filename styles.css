@@ -1294,3 +1294,89 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* ================= LARGE SCREEN OPTIMIZATIONS ================= */
+
+@media (min-width: 1400px) {
+  /* Reduce side padding on larger screens */
+  .page-wrapper {
+    padding-left: clamp(1rem, 2vw, 3rem);
+    padding-right: clamp(1rem, 2vw, 3rem);
+  }
+
+  .header-nav {
+    padding: 1rem clamp(1.5rem, 3vw, 4rem);
+  }
+
+  /* Increase heading sizes */
+  .intro-text-block h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+  }
+
+  .intro-text-block p {
+    font-size: 1.3rem;
+  }
+
+  /* Larger filter heading */
+  .filter-heading {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  /* Increase contact section text sizes */
+  .contact-intro {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  /* Increase form input text */
+  .form-row input,
+  .message-row textarea {
+    font-size: 1.1rem;
+    padding: 0.9rem;
+  }
+
+  /* Increase hero section padding */
+  .project-hero-content {
+    padding-left: 0;
+    padding-right: clamp(1rem, 2vw, 3rem);
+    gap: 3rem;
+  }
+
+  /* Expand section inner max-width */
+  .section-inner {
+    padding-left: clamp(1rem, 2vw, 3rem);
+    padding-right: clamp(1rem, 2vw, 3rem);
+  }
+
+  /* Project split gap and padding */
+  .project-split-grid {
+    gap: 3rem;
+  }
+
+  /* Increase project card padding */
+  .project-footer {
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 1.2rem;
+  }
+
+  /* Light blue background sections */
+  .light-blue-bg {
+    margin-left: calc(-1 * clamp(1rem, 2vw, 3rem));
+    margin-right: calc(-1 * clamp(1rem, 2vw, 3rem));
+    padding-left: clamp(1rem, 2vw, 3rem);
+    padding-right: clamp(1rem, 2vw, 3rem);
+  }
+
+  /* Contact section spacing */
+  .contact-section {
+    padding: 6rem clamp(2rem, 3vw, 4rem);
+  }
+
+  /* Project filter and feed layout adjustments */
+  .project-filter {
+    padding: 5rem clamp(2rem, 3vw, 4rem);
+  }
+
+  .project-feed {
+    padding: 2.5rem;
+  }
+}
