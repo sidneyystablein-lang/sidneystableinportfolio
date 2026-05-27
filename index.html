@@ -254,19 +254,21 @@
       Let’s connect!
     </p>
 
-    <form class="contact-form-fields">
+    <form class="contact-form-fields" id="contactForm">
 
       <div class="form-row">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
       </div>
 
       <div class="form-row message-row">
-        <textarea placeholder="Message" required></textarea>
+        <textarea name="message" placeholder="Message" required></textarea>
         <button type="submit" aria-label="Send message">→</button>
       </div>
 
     </form>
+
+    <div class="contact-status-popup" id="contactStatusPopup" aria-live="polite">message sent</div>
   </div>
 </section>
 

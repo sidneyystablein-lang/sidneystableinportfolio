@@ -159,6 +159,37 @@ slideshows.forEach((slideshow) => {
   showSlide();
 });
 
+/* ================= CONTACT FORM ================= */
+
+const contactForm = document.querySelector("#contactForm");
+const contactStatusPopup = document.querySelector("#contactStatusPopup");
+
+if (contactForm && contactStatusPopup) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameField = contactForm.querySelector("input[name='name']");
+    const emailField = contactForm.querySelector("input[name='email']");
+    const messageField = contactForm.querySelector("textarea[name='message']");
+
+    const name = nameField.value.trim();
+    const email = emailField.value.trim();
+    const message = messageField.value.trim();
+
+    const subject = encodeURIComponent(`New message from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+    window.location.href = `mailto:sidneyystablein@gmail.com?subject=${subject}&body=${body}`;
+
+    contactForm.reset();
+    contactStatusPopup.classList.add("visible");
+
+    window.setTimeout(() => {
+      contactStatusPopup.classList.remove("visible");
+    }, 2500);
+  });
+}
+
 /* ================= BEFORE/AFTER SLIDERS ================= */
 
 const sliders = document.querySelectorAll(".before-after-slider");
