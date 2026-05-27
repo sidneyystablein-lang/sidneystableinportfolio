@@ -581,13 +581,14 @@ min-height: 100vh;
   align-items: flex-start;
 }
 
-.project-hero-meta h1 {
+.project-hero-title {
   margin: 0 0 1rem;
   text-align: left;
   max-width: none;
-  padding: none;
+  padding: 0;
   margin-left: 0;
   margin-right: 0;
+  width: 100%;
 }
 
 .project-hero-content {
