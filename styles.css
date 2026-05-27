@@ -897,9 +897,9 @@ min-height: 100vh;
   color: #555;
 }
 
-.project-page h1,
-.project-page h2,
-.project-page h3 {
+.project-page h1:not(.project-hero-title),
+.project-page h2:not(.project-hero-title),
+.project-page h3:not(.project-hero-title) {
   text-align: center;
   max-width: 900px;
   margin-left: auto;
@@ -907,6 +907,13 @@ min-height: 100vh;
   padding: 0 2rem;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+}
+
+/* Ensure hero title elements don't inherit page heading padding */
+.project-hero-title {
+  padding: 0;
+  max-width: none;
+  text-align: left;
 }
 
 .section-inner h1 {
