@@ -565,7 +565,7 @@ min-height: 100vh;
   display: flex;
   gap: 2rem;
   align-items: stretch;
-  padding-left: clamp(1rem, 4vw, 6vw);
+  padding-left: 0;
   padding-right: clamp(1rem, 4vw, 6vw);
 }
 
