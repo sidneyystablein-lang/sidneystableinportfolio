@@ -187,7 +187,7 @@ min-height: 100vh;
 .highlight-pill {
   display: inline;
   background: rgba(33, 109, 185, 0.799);
-  color: inherit;
+  color: var(--white);
   border: 1px solid var(--dark);
   padding: 0.1em 0.45em;
   border-radius: 999px;
@@ -359,6 +359,10 @@ min-height: 100vh;
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
   border-radius: 10px;
   overflow: hidden;
+}
+
+.project-card:hover {
+  background-color: rgba(15, 23, 42, 0.144);
 }
 
 .project-card > a {
