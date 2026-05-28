@@ -1353,8 +1353,8 @@ footer p {
 
   /* Expand section inner max-width */
   .section-inner {
-    padding-left: clamp(1rem, 2vw, 3rem);
-    padding-right: clamp(1rem, 2vw, 3rem);
+    padding-left: clamp(0.5rem, 1vw, 1.5rem);
+    padding-right: clamp(0.5rem, 1vw, 1.5rem);
   }
 
   /* Project split gap and padding */
@@ -1383,10 +1383,26 @@ footer p {
 
   /* Project filter and feed layout adjustments */
   .project-filter {
-    padding: 5rem clamp(2rem, 3vw, 4rem);
+    /* reduce side padding dramatically on large screens */
+    padding: 2.5rem clamp(1rem, 1.5vw, 2rem);
   }
 
   .project-feed {
-    padding: 2.5rem;
+    /* reduced padding to decrease perceived margins */
+    padding: 1.25rem;
+  }
+
+  /* Reduce overall project-layout margins by increasing max width */
+  .project-layout {
+    max-width: 2000px;
+  }
+
+  /* Give intro block a higher max-width on large screens */
+  .intro-text-block {
+    max-width: 1400px;
+  }
+
+  .intro-text-block p {
+    max-width: 1200px;
   }
 }
