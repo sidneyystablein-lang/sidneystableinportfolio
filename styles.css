@@ -1,11 +1,11 @@
 :root {
-  --dark: #0f1a36;
-  --light: #EBF5FF;
-  --white: #f9fcff;
-  --medium: #D4EAFF;
-  --button-blue: #216DB9;
-  --bg: #E0EFFF;
-  --section: #EBF5FF;
+  --dark: #1b1b1b;
+  --light: #f4f4f4;
+  --white: #fefefe;
+  --medium: #e5e5e5;
+  --button-blue: #b4b4b4;
+  --bg: #efefef;
+  --section: #f3f9ff;
 }
 
 * {
@@ -182,6 +182,14 @@ min-height: 100vh;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.intro-image {
+  display: block;
+  width: clamp(140px, 18vw, 220px);
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 2rem;
 }
 
 .highlight-pill {
