@@ -48,35 +48,49 @@ let activeTags = [];
 
 if (filterButtons.length && cards.length) {
 
-  filterButtons.forEach(button => {
+    filterButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+        button.addEventListener("click", () => {
 
-      const tag = button.dataset.tag;
+            const tag = button.dataset.tag;
 
-      button.classList.toggle("active");
+            if (tag === "") {
 
-      if (activeTags.includes(tag)) {
-        activeTags = activeTags.filter(t => t !== tag);
-      } else {
-        activeTags.push(tag);
-      }
+                activeTags = [];
 
-      cards.forEach(card => {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
 
-        const tags = card.dataset.tags.split(" ");
+                button.classList.add("active");
 
-        const show =
-          activeTags.length === 0 ||
-          activeTags.some(tag => tags.includes(tag));
+            } else {
 
-        card.style.display = show ? "flex" : "none";
+                document.querySelector('[data-tag=""]').classList.remove("active");
 
-      });
+                button.classList.toggle("active");
+
+                if (activeTags.includes(tag)) {
+                    activeTags = activeTags.filter(t => t !== tag);
+                } else {
+                    activeTags.push(tag);
+                }
+
+            }
+
+            cards.forEach(card => {
+
+                const tags = card.dataset.tags.split(" ");
+
+                const show =
+                    activeTags.length === 0 ||
+                    activeTags.some(tag => tags.includes(tag));
+
+                card.style.display = show ? "" : "none";
+
+            });
+
+        });
 
     });
-
-  });
 
 }
 

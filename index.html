@@ -64,180 +64,197 @@
 </header>
 
 <!-- ================= PROJECT OVERVIEW ================= -->
+<!-- ================= PROJECT OVERVIEW ================= -->
 <section id="projects" class="project-overview">
 
-  <div class="project-layout">
+  <div class="projects-container">
 
-    <!-- LEFT COLUMN -->
- <aside class="project-filter">
+    <div class="projects-header">
 
-  <div class="filter-panel">
+      <h2 class="projects-title">Projects</h2>
 
-    <h2 class="filter-heading">Projects</h2>
-    <p class="filter-subheader">Filter projects by:</p>
+      <div class="filter-buttons">
 
-    <div class="filter-buttons">
+        <button class="filter-btn active" data-tag="">
+          All
+        </button>
 
-      <button class="filter-btn" data-tag="graphic">
-        Graphic Design
-      </button>
+        <button class="filter-btn" data-tag="graphic">
+          Graphic Design
+        </button>
 
-      <button class="filter-btn" data-tag="uxui">
-        UX / UI
-      </button>
+        <button class="filter-btn" data-tag="uxui">
+          UX / UI
+        </button>
 
-      <button class="filter-btn" data-tag="web">
-        Web Design
-      </button>
+        <button class="filter-btn" data-tag="web">
+          Web Design
+        </button>
 
-      <button class="filter-btn" data-tag="social">
-        Social Media
-      </button>
+        <button class="filter-btn" data-tag="social">
+          Social Media
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ================= PROJECT 1 ================= -->
+
+      <article class="project-card" data-tags="graphic web social">
+
+        <a href="Projects/project1.html">
+
+          <img
+            src="assets/images/service-express-thumbnail.png"
+            alt="Service Express preview"
+            class="project-image"
+          >
+
+          <div class="project-info">
+
+            <h3>Service Express</h3>
+
+            <div class="project-bottom">
+
+              <div class="project-tags">
+
+                <span class="pill">Graphic Design</span>
+                <span class="pill">Web Design</span>
+                <span class="pill">Social Media</span>
+
+              </div>
+
+              <span class="project-arrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+        </a>
+
+      </article>
+
+      <!-- ================= PROJECT 2 ================= -->
+
+      <article class="project-card" data-tags="uxui web">
+
+        <a href="Projects/project2.html">
+
+          <img
+            src="assets/images/cata-thumbnail.png"
+            alt="CATA preview"
+            class="project-image"
+          >
+
+          <div class="project-info">
+
+            <h3>CATA</h3>
+
+            <div class="project-bottom">
+
+              <div class="project-tags">
+
+                <span class="pill">UX / UI</span>
+                <span class="pill">Web Design</span>
+
+              </div>
+
+              <span class="project-arrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+        </a>
+
+      </article>
+
+      <!-- ================= PROJECT 3 ================= -->
+
+      <article class="project-card" data-tags="uxui web graphic">
+
+        <a href="Projects/project3.html">
+
+          <img
+            src="assets/images/Client-portfolio-thumbnail.png"
+            alt="Client Portfolio preview"
+            class="project-image"
+          >
+
+          <div class="project-info">
+
+            <h3>Client Portfolio</h3>
+
+            <div class="project-bottom">
+
+              <div class="project-tags">
+
+                <span class="pill">UX / UI</span>
+                <span class="pill">Web Design</span>
+                <span class="pill">Graphic Design</span>
+
+              </div>
+
+              <span class="project-arrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+        </a>
+
+      </article>
+
+      <!-- ================= PROJECT 4 ================= -->
+
+      <article class="project-card" data-tags="uxui web">
+
+        <a href="Projects/project4.html">
+
+          <img
+            src="assets/images/see-insights-thumbnail.png"
+            alt="SEE Insights preview"
+            class="project-image"
+          >
+
+          <div class="project-info">
+
+            <h3>SEE-Insights AI App</h3>
+
+            <div class="project-bottom">
+
+              <div class="project-tags">
+
+                <span class="pill">UX / UI</span>
+                <span class="pill">Web Design</span>
+
+              </div>
+
+              <span class="project-arrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+        </a>
+
+      </article>
 
     </div>
 
   </div>
 
-</aside>
-
-    <!-- RIGHT COLUMN -->
-    <div class="project-feed">
-
-    <article class="project-card" data-tags="graphic web social">
-      <a href="Projects/project1.html">
-
-      <img
-        src="assets/images/service-express-thumbnail.png"
-        alt="Service Express preview"
-        class="project-image"
-      >
-
-      <footer class="project-footer">
-        <div class="footer-line"></div>
-
-        <h3>Service Express</h3>
-
-        <div class="pill-row">
-          <div class="pill">
-            
-            Graphic Design
-          </div>
-          <div class="pill">
-            
-            Web Design
-          </div>
-           <div class="pill">
-            
-            Social Media
-          </div>
-        </div>
-
-        <div class="footer-line"></div>
-      </footer>
-
-    </a>
-  </article>
-
-  <article class="project-card" data-tags="uxui web">
-    <a href="Projects/project2.html">
-      <img
-        src="assets/images/cata-thumbnail.png"
-        alt="CATA preview"
-        class="project-image"
-      >
-
-      <footer class="project-footer">
-        <div class="footer-line"></div>
-
-        <h3>CATA</h3>
-
-        <div class="pill-row">
-          <div class="pill">
-            
-            UX / UI
-          </div>
-          <div class="pill">
-            
-            Web Design
-          </div>
-        </div>
-
-        <div class="footer-line"></div>
-      </footer>
-
-    </a>
-  </article>
-
-  <article class="project-card" data-tags="uxui web graphic">
-    <a href="Projects/project3.html">
-      <img
-        src="assets/images/Client-portfolio-thumbnail.png"
-        alt="Client Portfolio preview"
-        class="project-image"
-      >
-
-      <footer class="project-footer">
-        <div class="footer-line"></div>
-
-        <h3>Client Portfolio</h3>
-
-        <div class="pill-row">
-          <div class="pill">
-            
-            UX / UI
-          </div>
-          <div class="pill">
-            
-            Web Design
-          </div>
-          <div class="pill">
-            
-            Graphic Design
-          </div>
-        </div>
-
-        <div class="footer-line"></div>
-      </footer>
-
-    </a>
-  </article>
-
-  <article class="project-card" data-tags="uxui web">
-    <a href="Projects/project4.html">
-      <img
-        src="assets/images/see-insights-thumbnail.png"
-        alt="See-Insights preview"
-        class="project-image"
-      >
-
-      <footer class="project-footer">
-        <div class="footer-line"></div>
-
-        <h3>SEE-Insights AI App</h3>
-
-        <div class="pill-row">
-          <div class="pill">
-            
-            UX/UI
-          </div>
-          <div class="pill">
-            
-            Web Design
-          </div>
-        </div>
-
-        <div class="footer-line"></div>
-      </footer>
-
-    </a>
-  </article>
-
-  <div class="custom-scrollbar">
-    <div class="custom-scroll-thumb"></div>
-  </div>
-
-    </div>
-  </div>
 </section>
 
 </div>
