@@ -4,7 +4,7 @@
   --white: #f9fcff;
   --medium: #D4EAFF;
   --button-blue: #216DB9;
-  --bg: #E0EFFF;
+  --bg: #e4eff9;
   --section: #EBF5FF;
 }
 
@@ -377,6 +377,12 @@ min-height: 100vh;
 
 }
 
+.pill-row { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 0.75rem; 
+}
+
 .pill {
   position: relative;
   border: 1px solid var(--dark);
@@ -385,6 +391,19 @@ min-height: 100vh;
   border-radius: 999px;
   padding: 0.5rem 0.9rem;
   font-size: 0.8rem;
+}
+
+.website-pill { 
+  text-decoration: none; 
+  color: inherit; 
+  display: flex; 
+  align-items: 
+  center; 
+} 
+
+.website-pill:hover { 
+  background-color: rgba(214, 234, 255, 0.9); 
+  cursor: pointer; 
 }
 
 /* ================= CONTACT ================= */
